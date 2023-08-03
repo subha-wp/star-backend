@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_sheets",
+  "info": {
+    "singularName": "job-sheet",
+    "pluralName": "job-sheets",
+    "displayName": "Job Sheet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobSheetNo": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "customerPhone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "jobSheetDate": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "work": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::work.work",
+      "inversedBy": "job_sheets"
+    },
+    "address": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "job_sheets"
+    }
+  }
+}

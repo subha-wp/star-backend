@@ -94,6 +94,12 @@
       "relation": "oneToMany",
       "target": "api::work.work",
       "mappedBy": "user"
+    },
+    "job_sheets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-sheet.job-sheet",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

@@ -39,6 +39,12 @@
     },
     "email": {
       "type": "string"
+    },
+    "job_sheets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-sheet.job-sheet",
+      "mappedBy": "work"
     }
   }
 }
